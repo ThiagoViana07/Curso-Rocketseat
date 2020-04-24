@@ -1,0 +1,39 @@
+<html>
+
+<head>
+  <title></title>
+</head>
+
+<body>
+  <script>
+    //Dado o seguinte vetor de objetos:
+    var usuarios = [
+      {
+        nome: "Diego",
+        habilidades: ["Javascript", "ReactJS", "Redux"]
+      },
+      {
+        nome: "Gabriel",
+        habilidades: ["VueJS", "Ruby on Rails", "Elixir"]
+      }
+    ];
+
+    //O Diego possui as habilidades: Javascript, ReactJS, Redux
+    //O Gabriel possui as habilidades: VueJS, Ruby on Rails, Elixir
+    // Para percorrer um vetor você deve utilizar a sintaxe for...of e para unir valores de um array
+    //com um separador utilize o join.
+
+    function funcao(usuarios) {
+      for (let value of usuarios) {
+        console.log(value.nome, "possui as habilidades:", value.habilidades.join(', '))
+        // for(let value2 of value.habilidades){
+        //  console.log(value2)
+        // }
+      }
+    }
+
+    funcao(usuarios)   
+  </script>
+</body>
+
+</html>

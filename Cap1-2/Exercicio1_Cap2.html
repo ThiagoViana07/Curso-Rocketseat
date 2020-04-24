@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Page Title</title>
+
+ 
+</head>
+
+<body>
+  <button id='botao' name ='botao' class ='button'> Quadrado </button>
+  <div id = 'div1'>
+    <div class = "box"></div>
+  </div>
+  
+  <script>
+    //Crie um botão que ao ser clicado cria um novo elemento em tela com a forma de um quadrado
+    //vermelho com 100px de altura e largura. Sempre que o botão for clicado um novo quadrado deve
+    //aparecer na tela.
+    var btnQuadrado = document.getElementById('botao')
+    let boxElement = document.querySelector('.box')
+
+    btnQuadrado.onclick = function(){ // Clicar no botao
+      //boxElement.innerHTML = 'ricardo';
+      //alert('Botao Clicado')
+      boxElement = document.createElement('div')
+      console.log(boxElement)
+      boxElement.style.width = '100px';
+      boxElement.style.height = '100px';
+      boxElement.style.backgroundColor = '#AEA';
+      boxElement.style.margin = '10pxn'
+      //Adiciona a classe .box na div criada
+      boxElement.classList.add('box')
+      document.body.appendChild(boxElement)
+
+      //boxElement.appendChild
+    }
+
+
+    
+  </script>
+</body>
+
+</html>

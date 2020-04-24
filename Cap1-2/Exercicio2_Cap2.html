@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Exercício</title>
+
+ 
+</head>
+
+<body>
+  <button id='botao' name ='botao' class ='button'> Quadrado </button>
+  
+  <div class = "box" id ='container'></div>
+  
+  <script>
+    //Crie um botão que ao ser clicado cria um novo elemento em tela com a forma de um quadrado
+    //vermelho com 100px de altura e largura. Sempre que o botão for clicado um novo quadrado deve
+    //aparecer na tela.
+    var btnQuadrado = document.getElementById('botao')
+    let boxElement = document.querySelector('.box')
+        
+    btnQuadrado.onclick = function(){
+      //boxElement.innerHTML = 'ricardo';
+      //alert('Botao Clicado')
+      //var newColor = getRandomColor(); //E943FO
+      boxElement = document.createElement('div')
+      //console.log(boxElement)
+      boxElement.style.width = '100px';
+      boxElement.style.height = '100px';
+      boxElement.style.display = 'inline-block'
+      boxElement.style.backgroundColor = '#FF0';
+      boxElement.style.margin = '10px'
+      //Adiciona a classe .box na div criada
+      boxElement.classList.add('box')
+      document.body.appendChild(boxElement)
+     
+      boxElement.addEventListener('mouseover', function(){
+        getRandomColor(this)
+      });
+      
+      var container = document.getElementById("container");
+      container.appendChild(boxElement);
+      console.log(container)
+      //boxElement.appendChild
+    }
+    //Utilizando o resultado do primeiro desafio, toda vez que o usuário passar o mouse por cima de
+    //algum quadrado troque sua cor para uma cor aleatória gerada pela função abaixo:
+    function getRandomColor(boxElement){
+      var letters = "0123456789ABCDEF";
+      var color = "#";
+      for (var i = 0; i < 6; i++){
+        color += letters[Math.floor(Math.random() * 16)];
+      } 
+      return boxElement.style.backgroundColor = color;
+    }
+
+    //var newColor = getRandomColor(); //E943FO
+
+    function mudarCor(){
+      var color = getRandomColor();
+      boxElement.style.backgroundColor = color
+    }
+
+    
+  </script>
+</body>
+
+</html>

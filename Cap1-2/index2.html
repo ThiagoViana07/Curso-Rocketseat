@@ -1,0 +1,55 @@
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <title> </title>
+  </head>
+
+  <body>
+    <div id ="app">
+      <button onclick="mostrarAlerta()">Me pressione</button>
+    </div>
+    
+    <div id ="app2">
+      <button onmouseover="mostrarAlerta()">Me pressione2</button>
+    </div>
+
+    <div id = "app3">
+      <input type="text" name="nome" />
+      <button class="botao">Adicionar</button>
+    </div>
+
+
+    <script>
+      function mostrarAlerta(){
+        alert('Botão foi clicado');
+      }
+      var inputElement = document.getElementById('nome');
+      var inputElement2 = document.querySelector('div#app3 input');
+
+      var inputElement3 = document.querySelector('input[name=nome]')
+      var btnElement = document.querySelector('button.botao');
+
+      console.log(inputElement2);
+      
+      btnElement.onclick = function(){
+        var text = inputElement3.value;
+        alert(text);
+      }
+
+      var linkElement = document.createElement('a')
+      linkElement.setAttribute('href', 'http://google.com')
+
+      var textElement = document.createTextNode('Acessar google')
+      linkElement.appendChild(textElement)
+
+      var containerElement = document.querySelector('#app')
+      containerElement.appendChild(linkElement)
+
+      
+      //getElementsByTagName('input')
+      //Retorna todos os inputs  
+    </script>
+  </body>
+
+</html>
