@@ -21,6 +21,6 @@
   },
   "dependencies": {
     "@babel/plugin-proposal-object-rest-spread": "^7.9.5",
-    "axios": "^0.19.2"
+    "axios": "^0.21.1"
   }
 }
